@@ -10,7 +10,7 @@ margin: 0;
 padding: 0;
 background-color: '#FBF9F1';
 }
-
+ 
 .ff-secondary {
     font-family: 'Pacifico', cursive;
 }
@@ -205,6 +205,188 @@ background-color: '#FBF9F1';
 } 
 
 
+
+/* .meal_kit{
+    width: 220px;
+    background-color: #F0E68C;
+} */
+
+
+/* Meal plan page */
+
+.preference{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 300px;
+    margin-bottom: 20px;
+    grid-row: span 3;
+   
+}
+
+.x86{
+    margin-top: 50px;
+    margin-bottom: 50px;
+   
+}
+
+#r35 {
+    padding: 6px 30px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FF7F50;
+    display: inline;
+    border: solid 1px #FF7F50;
+    border-radius: 5px;
+    transform: 0.5s;
+  }
+
+  #t35 {
+    padding: 6px 30px;
+    font-size: 16px;
+    font-weight: 800;
+    color: #FF7F50;
+    display: inline;
+    border: solid 1px #FF7F50;
+    border-radius: 5px;
+    transform: 0.5s;
+  }
+
+
+
+  #serving  input:checked+#r35 {
+    background-color: #FF7F50;
+    color: white;
+  }
+
+  #number-meal  input:checked+#t35 {
+    background-color: #FF7F50;
+    color: white;
+  }
+
+  #r65 :hover{
+    background-color: #FF7F50;
+    color: white;
+  }
+#serving input{
+    display: none;
+}
+
+#number-meal input{
+    display: none;
+}
+
+#number-meal
+{
+    margin-top: 50px;
+}
+.shock h4{
+    font-size: 15px; 
+}
+
+
+.meal-plan{    
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* .meal-plane-in{
+    width: 50%;
+} */
+
+.shock{
+  padding: 50px 50px ;
+  margin-top: 80px;
+  border: #808080 1px solid;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+}
+.r65{
+display: inline;
+}
+
+.main-top{
+    text-align: center;
+}
+
+/* .preference input{
+    display: none;
+} */
+
+
+
+
+  .preference-button.active {
+    background-color: #D0F0C0;
+  }
+
+
+  #r335{
+    border: #000000 1px solid;
+    padding: 30px 30px;
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+  }
+.r35{
+    border: #000000 1px solid;
+    padding: 30px 30px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+#r335:hover{
+    background-color: #D0F0C0;
+}
+
+#r335 h5{
+    text-align: center;
+    font-size: 20px;
+    color: grey;
+}
+#r335 img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the block element horizontally */
+  }
+.meal_type{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.price{
+    margin-top: 50px;
+   
+}
+
+.preference-container {
+    margin-bottom: 20px;
+  }
+
+  .preference-label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .radio-container {
+    display: flex;
+  }
+
+  .radio-button:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+.meal_type img {
+    
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+}
 
 /* Footer */
 .footer {

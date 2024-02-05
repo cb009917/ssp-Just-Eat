@@ -1,4 +1,8 @@
- <x-app-layout>
+  <x-guest-layout>
+
+
+
+
     <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +26,7 @@
             @if (Route::has('login'))
                 <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
+                      
                     @else
                         <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
 
@@ -110,22 +114,42 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
+                            @auth
+                                
+                         
+                            @if(auth()->user()->email == 'Admin@admin.com')
+
+                            
+                         
                             <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
+                                {{ __('Manage Users') }}
                             </div>
+
+                            <x-dropdown-link href="{{ route ('user.index')}}">
+                                {{ __('Users') }}
+                            </x-dropdown-link>
+
+                                  <!-- product Management -->
+                                 
+
+      @endif
+      @endauth
+                            
+                           
+
+                            <div class="block px-4 py-2 text-xs text-gray-400">
+                                {{ __('Manage Meal Plans') }}
+                            </div>
+
+                            <x-dropdown-link href="{{ route ('recipe.index')}}">
+                                {{ __('Product') }}
+                            </x-dropdown-link>
+                            
+                            <div class="border-t border-gray-200"></div>
 
                             <x-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
-
-                            @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                <x-dropdown-link href="{{ route('api-tokens.index') }}">
-                                    {{ __('API Tokens') }}
-                                </x-dropdown-link>
-                            @endif
-
-                            <div class="border-t border-gray-200"></div>
-
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf
@@ -191,7 +215,7 @@
                 <form method="POST" action="{{ route('logout') }}" x-data>
                     @csrf
 
-                    <x-responsive-nav-link href="{{ route('logout') }}"
+                 6    <x-responsive-nav-link href="{{ route('logout') }}"
                                    @click.prevent="$root.submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
@@ -234,4 +258,4 @@
     </div>
 </nav> 
 
-</x-app-layout> 
+</x-guest-layout>  

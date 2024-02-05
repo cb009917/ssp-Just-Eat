@@ -265,7 +265,7 @@
                 @endauth
             </div>
         @endif
-           
+        
         </div>
             </div>
     </nav>

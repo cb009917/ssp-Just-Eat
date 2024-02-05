@@ -3,9 +3,9 @@
         <div class="container my-5 py-5">
             <div class="row align-items-center g-5">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 text-white animated slideInLeft">Celebrate Flavor <br> Satisfy Your Cravings </h1>
+                    <h1 class="display-3 text-white animated slideInLeft">Celebrate the <br> flavours of life </h1>
                   
-                    <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Get Started</a>
+                    <a href="/sub" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft">Get Started</a>
                 </div>
                 <div class="col-lg-6 text-center text-lg-end overflow-hidden">
                
@@ -365,9 +365,6 @@
                 </div>
             </div>
             <!-- Menu End -->
-    
-    
-    
     
             <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">

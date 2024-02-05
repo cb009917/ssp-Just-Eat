@@ -1,0 +1,81 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\products;
+use App\Http\Requests\StoreproductsRequest;
+use App\Http\Requests\UpdateproductsRequest;
+
+class ProductsController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        //  return view('admin.products.index',[
+        //     'products' => products::paginate(10),
+        
+        // ]);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(StoreproductsRequest $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(products $products)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(products $products)
+    {
+        // return view('admin.products.form',[
+        //     'products' => $products,
+        // ]);
+
+       
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(UpdateproductsRequest $request, products $products)
+    {
+        $validated = $request->validated([
+            'name' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            
+        ]);
+
+        $products->update($validated);
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(products $products)
+    {
+        $products->delete();
+        return redirect()->route('products.index')->with('success', 'Product successfully deleted!');
+    }
+}
