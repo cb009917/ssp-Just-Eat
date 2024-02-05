@@ -86,7 +86,7 @@ Route::middleware([
         $mealplan->time = request('time');
         $mealplan->save();
         
-        return redirect('/summery');
+        return redirect('/');
 });
 
 });
